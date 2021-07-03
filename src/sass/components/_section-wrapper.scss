@@ -1,0 +1,240 @@
+.section-wrapper {
+  @include margin-dist;
+  min-height: 500px;
+  width: calc(100% - 280px);
+  background-color: $light-color;
+  border: 1px solid rgba($component-header-color, $alpha: 0.3);
+}
+
+.section__header {
+  font-family: $paragraph-font;
+  color: $component-header-color;
+  font-weight: bold;
+  line-height: 50px;
+  font-size: 16px;
+  margin: 0;
+  padding-left: 20px;
+  text-transform: uppercase;
+  @include separator-bottom;
+}
+
+.elem-container {
+  position: relative;
+  width: 100%;
+  min-height: 150px;
+}
+
+.elem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section__date-filter {
+  @include separator-bottom;
+
+  .section__date-inputs {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+
+    .date-place {
+      display: inline-block;
+      border: 1px solid $border-color;
+    }
+
+    .date-input {
+      width: 150px;
+      border: none;
+      height: 36px;
+      margin: 4px 0;
+      padding-left: 15px;
+
+      &:nth-of-type(1) {
+        &::-webkit-calendar-picker-indicator { 
+          background: transparent;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include separator-left;
+        margin-right: 5px;
+
+        &::-webkit-calendar-picker-indicator { 
+          opacity: 0.3;
+          background-image: url('../../vendor/icons/calendar.svg');
+        }
+      }
+    }
+  }
+}
+
+.section__btn {
+  background-color: $button-color;
+  height: 40px;
+  border: none;
+  color: $light-color;
+  border-radius: 5%;
+}
+
+.section__btn--refresh {
+  width: 40px;
+}
+
+.section__btn--add {
+  width: 120px;
+  margin: 40px auto;
+  line-height: 40px;
+  font-size: 20px;
+  display: block;
+}
+
+.section__stock {
+  min-height: 600px;
+  @include separator-bottom;
+
+  .section__stock-values {
+    height: 80px;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .value-wrapper {
+      margin-left: 20px;
+      flex: 40%;
+      @include separator-bottom;
+
+      h3 {
+        position: relative;
+      }
+            
+      span {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $paragraph-color;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .section__stock-chart {
+    width: 80%;
+    margin: 40px auto;
+
+    h3 {
+      margin-left: 50px;
+    }
+
+    .chart-legend {
+      display: flex;
+      width: 100%;
+
+      .chart-legend-item {
+        flex: 33%;
+        margin: 15px 30px;
+        background-color: $background-elem-color;
+
+        div, p {
+          display: inline-block;
+        }
+
+        .chart-dot {
+          width: 15px;
+          height: 15px;
+          margin: auto 20px;
+          border-radius: 50%;
+                
+        }
+
+        &:nth-of-type(1) {
+          .chart-dot {
+            background-color: $chart-signups-color;
+          }
+        }
+
+        &:nth-of-type(2) {
+          .chart-dot {
+            background-color: $button-color;
+          }
+        }
+
+        &:nth-of-type(3) {
+          .chart-dot {
+            background-color: $active-contact-color;
+          }
+
+          background-color: $light-color;
+        }
+      }
+    }
+        
+    .chart-legend-img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+
+}
+
+.section__links {
+  width: 80%;
+  min-height: 400px;
+  margin: 0 auto;
+
+}
+
+.section__links-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.link-elem {
+  display: flex;
+  @include separator-bottom;
+  padding: 0 15px;
+  transition: 1s all;
+
+  &:nth-of-type(1) {
+    @include separator-top;
+  }
+
+  h3 {
+    flex: 4;
+  }
+
+  a {
+    color: $chart-signups-color;
+    line-height: 58px;
+  }
+
+  a:nth-of-type(1) {
+    flex: 3;
+  }
+
+  [class^="icon"] {
+    opacity: 0;
+    margin-left: 20px;
+    transition: 1s all;
+    color: $component-header-color;
+  }
+
+  &:hover {
+    background-color: $background-elem-color;
+
+    [class^="icon"] {
+      opacity: 1;
+
+      &:hover {
+        color: $button-color;
+      }
+    }
+  }
+
+}

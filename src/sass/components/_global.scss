@@ -1,0 +1,42 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  font-family: $brand-font;
+  background-color: $body-color;
+}
+
+h1 {
+  font-size: 20px;
+  color: $section-title-color;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: $component-header-color;
+}
+
+h3 {
+  color: $component-header-color;
+}
+
+p {
+  font-size: $paragraph-font-size;
+  font-style: $paragraph-font;
+  color: $paragraph-color;
+}
+
+li {
+  font-size: 16px;
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $component-header-color;
+}

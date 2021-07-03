@@ -1,0 +1,26 @@
+.user-panel {
+  display: flex;
+  justify-content: flex-end;
+  @include separator-bottom;
+  height: $user-panel-height;
+  background-color: $light-color;
+
+  div {
+    @include separator-left;
+    display: flex;
+  }
+
+  p {
+    font-family: $paragraph-font;
+    color: $component-header-color;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+
+  i {
+    color: $component-header-color;
+    line-height: 50px;
+    font-size: 16px;
+    margin: 0 15px;
+  }
+}
