@@ -199,7 +199,7 @@
   display: flex;
   @include separator-bottom;
   padding: 0 15px;
-  transition: 1s all;
+  transition: $animate;
 
   &:nth-of-type(1) {
     @include separator-top;
@@ -212,16 +212,19 @@
   a {
     color: $chart-signups-color;
     line-height: 58px;
+    font-size: 0;
   }
 
   a:nth-of-type(1) {
     flex: 3;
+    font-size: 16px;
   }
 
   [class^="icon"] {
+    font-size: 12px;
     opacity: 0;
     margin-left: 20px;
-    transition: 1s all;
+    transition: $animate;
     color: $component-header-color;
   }
 
@@ -238,3 +241,91 @@
   }
 
 }
+
+.section__statistic {
+  min-height: 500px;
+
+  .statistic-table {
+    margin: 50px auto 0;
+    width: 90%;
+
+    th {
+      margin: 0;
+      padding: 15px 15px 15px 0;
+      color: $component-header-color;
+      font-size: 18px;
+      text-align: left;
+      transition: $animate;
+
+      i {
+        opacity: 0;
+        transition: $animate;
+        margin-left: 10px;
+        font-size: 14px;
+        color: $paragraph-color;
+        cursor: pointer;
+      }
+    }
+
+    th:hover {
+      background-color: $background-elem-color;
+      color: $paragraph-color;
+
+      i {
+        opacity: 1;
+      }
+    }
+
+    td, th {
+      @include separator-bottom;
+    }
+
+    tr.table-line {
+      transition: $animate;
+
+      &:hover {
+        background-color: $background-elem-color;
+      }
+    }
+      
+  }
+  
+  .statistic-nav {
+    display: flex;
+    margin: 30px auto 50px;
+    width: 30%;
+    height: 40px;
+
+    button {
+      background-color: $light-color;
+      border: none;
+      font-size: 20px;
+      color: $component-header-color;
+      line-height: 40px;
+      height: 40px;
+      width: 40px;
+    }
+
+    .nav-numbers {
+      display: flex;
+      padding: 0;
+
+      li {
+        font-size: 18px;
+        line-height: 40px;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        margin: 0;
+        color: $active-contact-font-color;
+
+        &:hover {
+          color: $component-header-color;
+          background-color: $background-elem-color;
+        }
+      }
+    }
+  }
+
+}
+
