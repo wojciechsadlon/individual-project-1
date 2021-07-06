@@ -377,10 +377,6 @@
     font-size: 12px;
   }
 
-  // .date-input:nth-of-type(1) {
-  //     @extend  .date-input:nth-of-type(2);
-  //   }
-
   .section__btn--refresh {
     width: 100%;
   }
@@ -397,8 +393,6 @@
   .section__stock .section__stock-chart {
     margin: 150px 5px 30px 5px;
     width: 100%;
-
-    // h3 {}
   }
 
   .section__stock .section__stock-chart .chart-legend .chart-legend-item {
@@ -477,18 +471,6 @@
     text-align: center;
   }
 
-  // .date-place {
-  //   font-size: 12px;
-  // }
-
-  // // .date-input:nth-of-type(1) {
-  // //     @extend  .date-input:nth-of-type(2);
-  // //   }
-
-  // .section__btn--refresh {
-  //   width: 100%;
-  // }
-
   .section__stock-values {
     display: block;
     
@@ -518,19 +500,6 @@
     }
   }
 
-  //     .link-elem {
-  //       padding: 0 10px;
-
-  //       h3, a:nth-of-type(1) {
-  //         font-size: 12px;
-  //         vertical-align: middle;
-  //         line-height: 58px;
-  //         margin: 0;
-  //       }
-  //     }
-  //   }
-  // }
-
   .section__statistic {
     .statistic-table{
       th, p {
@@ -546,25 +515,4 @@
       width: 90%;
     }
   }
-
-  // #banners .link-elem {
-  //   flex-wrap: wrap;
-
-  //   h3 {
-  //     flex: 100%;
-  //     line-height: 28px;
-  //   }
-
-  //   a {
-  //     line-height: 28px;
-
-  //     &:nth-of-type(1) {
-  //       flex: 70%;
-  //     }
-  //   }
-  // }
-
-  // .section__form .form-wrapper {
-  //   width: 90%;
-  // }
 }
