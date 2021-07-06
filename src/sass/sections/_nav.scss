@@ -7,6 +7,7 @@
   background-color: $paragraph-color;
   display: flex;
   flex-direction: column;
+  transition: $animate;
 
   .nav__header {
     display: flex;
@@ -96,6 +97,23 @@
       font-size: 14px;
       margin: 8px 10px;
       color: $active-contact-font-color;
+    }
+  }
+}
+
+// Media queries
+
+@media (max-width: 1024px) {
+  .nav {
+    left: -200px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 5;
+
+    &:hover {
+      left: 0;
+      height: 100vh;
+      overflow: auto;
     }
   }
 }

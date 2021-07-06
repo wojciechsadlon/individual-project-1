@@ -35,11 +35,6 @@
   @include separator-bottom;
 
   .section__date-inputs {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-
     .date-place {
       display: inline-block;
       border: 1px solid $border-color;
@@ -185,7 +180,6 @@
   width: 80%;
   min-height: 400px;
   margin: 0 auto;
-
 }
 
 .section__links-wrapper {
@@ -248,6 +242,7 @@
   .statistic-table {
     margin: 50px auto 0;
     width: 90%;
+    border-collapse: collapse;
 
     th {
       margin: 0;
@@ -277,6 +272,7 @@
     }
 
     td, th {
+      padding-left: 15px;
       @include separator-bottom;
     }
 
@@ -289,11 +285,16 @@
     }
       
   }
+
+  .statistic-table--justify {
+    table-layout: auto;
+  }
+
   
   .statistic-nav {
     display: flex;
     margin: 30px auto 50px;
-    width: 30%;
+    width: 40%;
     height: 40px;
 
     button {
@@ -309,12 +310,13 @@
     .nav-numbers {
       display: flex;
       padding: 0;
+      width: 100%;
 
       li {
         font-size: 18px;
         line-height: 40px;
         height: 40px;
-        width: 40px;
+        flex: 1;
         text-align: center;
         margin: 0;
         color: $active-contact-font-color;
@@ -329,3 +331,240 @@
 
 }
 
+.section__form {
+  @include separator-bottom;
+  margin: 40px auto;
+  padding-bottom: 40px;
+
+  .form-wrapper {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+
+    h3 {
+      flex: 30%;
+    }
+
+    input {
+      flex: 70%;
+      border: 1px solid $border-color;
+      height: 35px;
+      align-self: center;
+
+      &:focus {
+        outline: none;
+        background-color: $border-color;
+        border: 1px solid $active-contact-font-color;
+      }
+    }
+  }
+}
+
+// Media queries
+
+@media (max-width: 767px) {
+  .section-wrapper {
+    width: 100%;
+    margin: 15px 0;
+    overflow: scroll;
+  }
+
+  .section__header {
+    text-align: center;
+  }
+
+  .date-place {
+    font-size: 12px;
+  }
+
+  // .date-input:nth-of-type(1) {
+  //     @extend  .date-input:nth-of-type(2);
+  //   }
+
+  .section__btn--refresh {
+    width: 100%;
+  }
+
+  .section__stock-values {
+    display: block;
+    
+    .elem {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .section__stock .section__stock-chart {
+    margin: 150px 5px 30px 5px;
+    width: 100%;
+
+    // h3 {}
+  }
+
+  .section__stock .section__stock-chart .chart-legend .chart-legend-item {
+    margin: 5px 15px;
+
+    .chart-dot {
+      margin: 0;
+    }
+  }
+
+  .section__links {
+    width: 100%;
+
+    &-wrapper {
+      width: 100%;
+
+      .link-elem {
+        padding: 0 10px;
+
+        h3, a:nth-of-type(1) {
+          font-size: 12px;
+          vertical-align: middle;
+          line-height: 58px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .section__statistic {
+    .statistic-table{
+      th, p {
+        font-size: 12px;
+      }
+
+      th {
+        padding: 5px;
+      }
+    }
+
+    .statistic-nav {
+      width: 90%;
+    }
+  }
+
+  #banners .link-elem {
+    flex-wrap: wrap;
+
+    h3 {
+      flex: 100%;
+      line-height: 28px;
+    }
+
+    a {
+      line-height: 28px;
+
+      &:nth-of-type(1) {
+        flex: 70%;
+      }
+    }
+  }
+
+  .section__form .form-wrapper {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section-wrapper {
+    width: 100%;
+    margin: 15px 0;
+    overflow: scroll;
+  }
+
+  .section__header {
+    text-align: center;
+  }
+
+  // .date-place {
+  //   font-size: 12px;
+  // }
+
+  // // .date-input:nth-of-type(1) {
+  // //     @extend  .date-input:nth-of-type(2);
+  // //   }
+
+  // .section__btn--refresh {
+  //   width: 100%;
+  // }
+
+  .section__stock-values {
+    display: block;
+    
+    .elem {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .section__stock .section__stock-chart {
+    margin-top: 150px;
+  }
+
+  .section__stock .section__stock-chart .chart-legend .chart-legend-item {
+    margin: 5px 15px;
+
+    .chart-dot {
+      margin: 0;
+    }
+  }
+
+  .section__links {
+    width: 100%;
+
+    &-wrapper {
+      width: 80%;
+    }
+  }
+
+  //     .link-elem {
+  //       padding: 0 10px;
+
+  //       h3, a:nth-of-type(1) {
+  //         font-size: 12px;
+  //         vertical-align: middle;
+  //         line-height: 58px;
+  //         margin: 0;
+  //       }
+  //     }
+  //   }
+  // }
+
+  .section__statistic {
+    .statistic-table{
+      th, p {
+        font-size: 12px;
+      }
+
+      th {
+        padding: 5px;
+      }
+    }
+
+    .statistic-nav {
+      width: 90%;
+    }
+  }
+
+  // #banners .link-elem {
+  //   flex-wrap: wrap;
+
+  //   h3 {
+  //     flex: 100%;
+  //     line-height: 28px;
+  //   }
+
+  //   a {
+  //     line-height: 28px;
+
+  //     &:nth-of-type(1) {
+  //       flex: 70%;
+  //     }
+  //   }
+  // }
+
+  // .section__form .form-wrapper {
+  //   width: 90%;
+  // }
+}

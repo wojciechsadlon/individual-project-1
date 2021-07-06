@@ -24,3 +24,27 @@
     margin: 0 15px;
   }
 }
+
+// Media queries
+
+@media (max-width: 767px) {
+  .user-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    @include separator-top;
+    width: 100%;
+
+    p {
+      font-size: 12px;
+
+      &.user-panel__wallet__amount {
+        margin: 19px auto;
+      }
+    }
+
+    i:nth-of-type(2) {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -40,3 +40,21 @@ a {
   text-decoration: none;
   color: $component-header-color;
 }
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  p, li {
+    font-size: 14px;
+  }
+}
