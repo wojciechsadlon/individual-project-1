@@ -5,16 +5,26 @@
   height: $user-panel-height;
   background-color: $light-color;
 
-  div {
-    @include separator-left;
+  button {
     display: flex;
+    transition: $animate;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    @include separator-left;
+
+    &:hover {
+      background: $paragraph-color;
+    }
   }
 
-  p {
+  span {
+    line-height: 50px;
     font-family: $paragraph-font;
     color: $component-header-color;
     font-weight: bold;
     margin-right: 15px;
+    align-self: middle;
   }
 
   i {
@@ -22,6 +32,7 @@
     line-height: 50px;
     font-size: 16px;
     margin: 0 15px;
+    align-self: middle;
   }
 }
 

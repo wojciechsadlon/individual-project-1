@@ -60,14 +60,21 @@
   }
 
   .nav__contact {
-    display: flex;
-    flex-wrap: wrap;
-    
     &-title {
-      flex: 100%;
       color: $component-header-color;
       margin-left: 20px;
       font-size: 14px;
+    }
+
+    .nav__contact-wrapper {
+      display: flex;
+      cursor: pointer;
+      transition: $animate;
+      padding: 10px;
+
+      &:hover {
+        background: rgba($button-color, $alpha: 0.2);
+      }
     }
 
     &-photo {

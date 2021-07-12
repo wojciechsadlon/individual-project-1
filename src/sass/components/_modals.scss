@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: $border-color;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: auto;
+  padding: 30px;
+  display: none;
+
+  backdrop-filter: blur(4px);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.show {
+    display: flex;
+  }
+}
+
+.modal {
+  max-width: 600px;
+  margin: auto;
+  background: $light-color;
+  position: relative;
+  display: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 2px rgba($component-header-color, $alpha: 0.3);
+
+  &.show {
+    display: block;
+  }
+
+  .section__btn--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    height: 50px;
+    border-radius: 5px;
+  }
+
+  &__login {
+    .login-wrapper {
+      padding: 30px;
+      display: flex;
+
+      input {
+        width: 33.33%;
+
+        &:nth-of-type(1),&:nth-of-type(2) {
+          margin-right: 15px;
+
+          // &::webkit-input-placeholder:before {
+          //   content: "\0051";
+          //   font-family: 'Glyphter';
+        }          
+      }
+    }
+  }
+
+  &__chat {
+    .contact-wrapper {
+      padding: 20px;
+      display: flex;
+      @include separator-bottom;
+
+      h4 {
+        font-size: 24px;
+        margin: 10px auto;
+      }
+
+      p {
+        background-color: $active-contact-color;
+        color: white;
+        font-size: 12px;
+        padding: 2px;
+        border-radius: 2px;
+        width: 40px;
+        text-align: center;
+      }
+
+      .contact-photo {
+        background-image: url('../images/km_large.jpg');
+        width: 60px;
+        height: 60px;
+        margin: 10px 20px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .messages-wrapper {
+      padding: 30px;
+      @include separator-bottom;
+      display: flex;
+      flex-direction: column;
+
+      p {
+        padding: 15px;
+        background-color: $background-elem-color;
+        border-radius: 5px;
+        word-wrap: break-word;
+        max-width: 75%;
+
+        &.from-me {
+          align-self: flex-end;
+          background-color: $section-title-color;
+          color: $light-color;
+        }
+      }
+    }
+
+    .send-wrapper {
+      padding: 15px;
+      display: flex;
+
+      input[type="text"] {
+        flex: 80%;
+        margin-right: 15px;
+        outline: none;
+        border: 1px solid $border-color;
+      }
+    }
+  }
+
+  &__quit {
+    min-width: 300px;
+
+    .button-wrapper {
+      display: flex;
+      padding: 15px;
+      justify-content: flex-end;
+      
+      button {
+        width: 80px;
+        margin-left: 15px;
+
+        &:nth-of-type(1) {
+          background-color: $component-header-color;
+        }
+      }
+    }
+  }
+}
