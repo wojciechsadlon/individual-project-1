@@ -153,7 +153,7 @@ a { text-decoration: none; color: #9c9c9c; }
 
 .section__date-filter .section__date-inputs .date-input:nth-of-type(2) { border-left: 1px solid rgba(156, 156, 156, 0.3); margin-right: 5px; }
 
-.section__date-filter .section__date-inputs .date-input::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.3; background-image: url("../../vendor/icons/calendar.svg"); }
+.section__date-filter .section__date-inputs .date-input::-webkit-calendar-picker-indicator { cursor: pointer; opacity: 0.3; background-image: url("../vendor/icons/calendar.svg"); }
 
 @media (min-width: 768px) { .section__date-filter .section__date-inputs .date-input:nth-of-type(1)::-webkit-calendar-picker-indicator { background: transparent; } }
 
