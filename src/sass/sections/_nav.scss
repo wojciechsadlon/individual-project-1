@@ -42,6 +42,7 @@
 
       a, i {
         transition: all 1s;
+        vertical-align: middle;
       }
 
       &:hover {
@@ -117,7 +118,7 @@
     overflow: hidden;
     z-index: 5;
 
-    &:hover {
+    &.active {
       left: 0;
       height: 100vh;
       overflow: auto;

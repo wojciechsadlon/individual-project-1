@@ -1,17 +1,39 @@
+// Settings
+
+const select = {
+  overlay: document.getElementById('overlay'),
+  closeModal: document.querySelectorAll('#overlay .js--close-modal'),
+  allModals: document.querySelectorAll('#overlay > *'),
+  allPopups: document.querySelectorAll('.popup'),
+  chatInput: document.querySelector('.msg-text'),
+  chatSendBtn: document.querySelector('button[value="Send"]'),
+  msgWrapper: document.querySelector('.messages-wrapper'),
+  sections: document.querySelectorAll('.section-wrapper'),
+  navLinks: document.querySelectorAll('.nav__list li'),
+  navButton: document.querySelector('.nav__header-button'),
+  navPanel: document.querySelector('.nav'),
+};
+
+const classNames = {
+  show: 'show',
+  fromMe: 'from-me',
+  active: 'active',
+};
+
 // Modals
 
 function closeModal() {
-  document.getElementById('overlay').classList.remove('show');
+  select.overlay.classList.remove(classNames.show);
 }
 
-document.querySelectorAll('#overlay .js--close-modal').forEach(function(btn) {
+select.closeModal.forEach(function(btn) {
   btn.addEventListener('click', function(e){
     e.preventDefault();
     closeModal();
   });
 });
 
-document.querySelector('#overlay').addEventListener('click', function(e){
+select.overlay.addEventListener('click', function(e){
   if(e.target === this){
     closeModal();
   }
@@ -24,14 +46,14 @@ document.addEventListener('keyup', function(e){
 });
 
 function openModal(modal) {
-  document.querySelectorAll('#overlay > *').forEach(function(modal){
-    modal.classList.remove('show');
+  select.allModals.forEach(function(modal){
+    modal.classList.remove(classNames.show);
   });
-  document.querySelector('#overlay').classList.add('show');
-  document.querySelector(modal).classList.add('show');
+  select.overlay.classList.add(classNames.show);
+  document.querySelector(modal).classList.add(classNames.show);
 }
 
-document.querySelectorAll('.popup').forEach((popup) => {
+select.allPopups.forEach((popup) => {
   popup.addEventListener('click', function(e){
     e.preventDefault();
     const id = '#' + popup.getAttribute('href');
@@ -43,18 +65,18 @@ document.querySelectorAll('.popup').forEach((popup) => {
 // Chat
 
 function sendMessage(){
-  const text = document.querySelector('.msg-text').value;
+  const text = select.chatInput.value;
   const newMsg = document.createElement('p');
-  newMsg.classList.add('from-me');
+  newMsg.classList.add(classNames.fromMe);
   newMsg.innerHTML = text;
   
   if(text){
-    document.querySelector('.messages-wrapper').appendChild(newMsg);
-    document.querySelector('.msg-text').value = '';
+    select.msgWrapper.appendChild(newMsg);
+    select.chatInput.value = '';
   }
 }
 
-document.querySelector('button[value="Send"]').addEventListener('click', function(e){
+select.chatSendBtn.addEventListener('click', function(e){
   e.preventDefault;
   sendMessage();
 });
@@ -93,17 +115,16 @@ var chart = new Chart(ctx, {
 // Links
 
 function activateSection(link){
-  const sections = document.querySelectorAll('.section-wrapper');
 
-  for(let section of sections){
-    section.classList.remove('active');
+  for(let section of select.sections){
+    section.classList.remove(classNames.active);
     if(section.getAttribute('id') === link){
-      section.classList.add('active');
+      section.classList.add(classNames.active);
     }
   }
 }
 
-document.querySelectorAll('.nav__list li').forEach((link) => {
+select.navLinks.forEach((link) => {
   link.addEventListener('click', function(e){
     e.preventDefault();
     const linkId = link.querySelector('a').getAttribute('href').replace('#', '');
@@ -111,4 +132,10 @@ document.querySelectorAll('.nav__list li').forEach((link) => {
     activateSection(linkId);
   });
 });
+
+// Nav
+
+select.navButton.addEventListener('click', function(e){
+  select.navPanel.classList.toggle(classNames.active);
+})
 
