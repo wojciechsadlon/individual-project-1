@@ -138,6 +138,14 @@
         margin-right: 15px;
         outline: none;
         border: 1px solid $border-color;
+
+        &::placeholder {
+          padding-left: 25px;
+          background-image: url('../../vendor/icons/message.svg');
+          background-repeat: no-repeat;
+          color: $paragraph-color;
+          opacity: 0.5;  
+        }
       }
     }
   }
