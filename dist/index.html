@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/icons/css/Glyphter.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="nav">
+        <div class="nav__header">
+            <div class="nav__header-logo">Just do it</div>
+            <button class="nav__header-button" type="button"><i class="fas fa-bars"></i></button>
+        </div>
+        <ul class="nav__list">
+            <li><a href="#general"><i class="icon-general"></i>General</a></li>
+            <li><a href="#details"><i class="icon-details"></i>Details</a></li>
+            <li><a href="#links"><i class="icon-links"></i>Links</a></li>
+            <li><a href="#banners"><i class="icon-banners"></i>Banners</a></li>
+            <li><a href="#personaldata"><i class="icon-personaldata"></i>Personal data</a></li>
+            <li><a href="#payout"><i class="icon-payout"></i>Payout</a></li>
+            <li><a href="#postback"><i class="icon-postback"></i>Postback</a></li>
+        </ul>
+        <div class="nav__contact">
+            <p class="nav__contact-title">YOUR MANAGER</p>
+            <div class="nav__contact-wrapper popup" href="modal-chat">
+                <div class="nav__contact-photo"></div>
+                <p class="nav__contact-name">Johnny B.</p>
+            </div>
+        </div>
+    </section>
+    <section class="user-panel">
+        <button class="user-panel__wallet user-panel__wallet__amount" type="button">
+            <i class="icon-wallet"></i><span>$1,500.00</span><i class="icon-arrow-down"></i>
+        </button>
+        <button class="user-panel__notification" type="button">
+            <i class="icon-notification"></i>
+        </button>
+        <button class="user-panel__id user-panel__name popup" href="modal-login" type="button">
+            <i class="icon-profile"></i><span>Morgan Freeman</span></button>
+        <button class="user-panel__logout popup" href="modal-quit" type="button">
+            <i class="icon-quit"></i>
+        </button>
+    </section>
+    <section class="section-wrapper active" id="general">
+        <h2 class="section__header">general statistic</h2>
+        <div class="section__date-filter elem-container">
+            <div class="section__date-inputs elem">
+                <div class="date-place">
+                    <input class="date-input" type="date" value="2021-07-01">
+                    <input class="date-input" type="date" value="2021-07-14">
+                </div>
+                <button class="section__btn section__btn--refresh" type="button"><i class="icon-refresh"></i></button>
+            </div>
+        </div>
+        <div class="section__stock">
+            <div class="section__stock-values elem-container">
+                <div class="section__stock-values elem">
+                    <div class="value-wrapper">
+                        <h3 class="value-header">Visit Signups<span>124</span></h3>
+                    </div>
+                    <div class="value-wrapper">
+                        <h3 class="value-header">Net deposit<span>564</span></h3>
+                    </div>
+                    <div class="value-wrapper">
+                        <h3 class="value-header">FTD<span>445</span></h3>
+                    </div>
+                    <div class="value-wrapper">
+                        <h3 class="value-header">Turn over<span>432</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="section__stock-chart">
+                <h3>Earnings chart</h3>
+                <div class="chart-legend">
+                    <div class="chart-legend-item">
+                        <div class="chart-dot"></div>
+                        <p>Signups</p>
+                    </div>
+                    <div class="chart-legend-item">
+                        <div class="chart-dot"></div>
+                        <p>FTD</p>
+                    </div>
+                    <div class="chart-legend-item">
+                        <div class="chart-dot"></div>
+                        <p>Earned</p>
+                    </div>
+                </div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </section>
+    <section class="section-wrapper" id="links">
+        <h2 class="section__header">links</h2>
+        <div class="section__links">
+            <button class="section__btn section__btn--add" type="button">+ add new</button>
+            <div class="section__links-wrapper">
+                <div class="link-elem">
+                    <h3>Home page</h3>
+                    <a href="http://www.homepage.com">http://www.homepage.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Currently offer</h3>
+                    <a href="http://www.currently.com">http://www.currently.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Blurpix</h3>
+                    <a href="http://www.blurpix.com">http://www.blurpix.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Your site</h3>
+                    <a href="http://www.yoursite.com">http://www.yoursite.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Google</h3>
+                    <a href="http://www.google.com">http://www.google.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Facebook</h3>
+                    <a href="http://www.facebook.com">http://www.facebook.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Dashboard</h3>
+                    <a href="http://www.dashboard.com">http://www.dashboard.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Blurax</h3>
+                    <a href="http://www.blurax.com">http://www.blurax.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Piece of Wine</h3>
+                    <a href="http://www.pieceofwine.com">http://www.pieceofwine.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Twitter</h3>
+                    <a href="http://www.twitter.com">http://www.twitter.com</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+            </div>
+            <button class="section__btn section__btn--add" type="button">+ add new</button>
+        </div>
+    </section>
+    <section class="section-wrapper" id="details">
+        <h2 class="section__header">detail statistic</h2>
+        <div class="section__date-filter elem-container">
+            <div class="section__date-inputs elem">
+                <div class="date-place">
+                    <input class="date-input" type="date" value="2021-07-01">
+                    <input class="date-input" type="date" value="2021-07-14">
+                </div>
+                <button class="section__btn section__btn--refresh" type="button"><i class="icon-refresh"></i></button>
+            </div>
+        </div>
+        <div class="section__statistic">
+            <div class="table-wrapper">
+                <table class="statistic-table">
+                    <tbody>
+                        <tr class="table-header">
+                            <th scope="col">Tracker name<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">Initiated date<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">Visits<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">Unique<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">Signups<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">FTD<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">Depositors<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">Deposits ($)<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">Payout ($)<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">Turnover<i class="icon-arrow-down-small"></i></th>
+                            <th scope="col">Deal<i class="icon-arrow-down-small"></i></th>
+                        </tr>
+                        <tr class="table-line">
+                            <td><p>aff/sam_test</p></td>
+                            <td><p>17/08/02 (12:58)</p></td>
+                            <td><p>232</p></td>
+                            <td><p>114</p></td>
+                            <td><p>12</p></td>
+                            <td><p>6</p></td>
+                            <td><p>3</p></td>
+                            <td><p>34,425.00</p></td>
+                            <td><p>234.00</p></td>
+                            <td><p>421,342.00</p></td>
+                            <td><p>cpl(200)</p></td>
+                        </tr>
+                        <tr class="table-line">
+                            <td><p>aff/sam_test</p></td>
+                            <td><p>17/08/02 (12:58)</p></td>
+                            <td><p>232</p></td>
+                            <td><p>114</p></td>
+                            <td><p>12</p></td>
+                            <td><p>6</p></td>
+                            <td><p>3</p></td>
+                            <td><p>34,425.00</p></td>
+                            <td><p>234.00</p></td>
+                            <td><p>421,342.00</p></td>
+                            <td><p>cpl(200)</p></td>
+                        </tr>
+                        <tr class="table-line">
+                            <td><p>aff/sam_test</p></td>
+                            <td><p>17/08/02 (12:58)</p></td>
+                            <td><p>232</p></td>
+                            <td><p>114</p></td>
+                            <td><p>12</p></td>
+                            <td><p>6</p></td>
+                            <td><p>3</p></td>
+                            <td><p>34,425.00</p></td>
+                            <td><p>234.00</p></td>
+                            <td><p>421,342.00</p></td>
+                            <td><p>cpl(200)</p></td>
+                        </tr>
+                        <tr class="table-line">
+                            <td><p>aff/sam_test</p></td>
+                            <td><p>17/08/02 (12:58)</p></td>
+                            <td><p>232</p></td>
+                            <td><p>114</p></td>
+                            <td><p>12</p></td>
+                            <td><p>6</p></td>
+                            <td><p>3</p></td>
+                            <td><p>34,425.00</p></td>
+                            <td><p>234.00</p></td>
+                            <td><p>421,342.00</p></td>
+                            <td><p>cpl(200)</p></td>
+                        </tr>
+                        <tr class="table-line">
+                            <td><p>aff/sam_test</p></td>
+                            <td><p>17/08/02 (12:58)</p></td>
+                            <td><p>232</p></td>
+                            <td><p>114</p></td>
+                            <td><p>12</p></td>
+                            <td><p>6</p></td>
+                            <td><p>3</p></td>
+                            <td><p>34,425.00</p></td>
+                            <td><p>234.00</p></td>
+                            <td><p>421,342.00</p></td>
+                            <td><p>cpl(200)</p></td>
+                        </tr>
+                        <tr class="table-line">
+                            <td><p>aff/sam_test</p></td>
+                            <td><p>17/08/02 (12:58)</p></td>
+                            <td><p>232</p></td>
+                            <td><p>114</p></td>
+                            <td><p>12</p></td>
+                            <td><p>6</p></td>
+                            <td><p>3</p></td>
+                            <td><p>34,425.00</p></td>
+                            <td><p>234.00</p></td>
+                            <td><p>421,342.00</p></td>
+                            <td><p>cpl(200)</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="statistic-nav">
+                <ul class="nav-numbers">
+                    <li><button type="button"><i class="icon-arrow-left"></i></button></li>
+                    <li><button type="button">1</button></li>
+                    <li><button type="button">2</button></li>
+                    <li><button type="button">3</button></li>
+                    <li><button type="button">4</button></li>
+                    <li><button type="button">5</button></li>
+                    <li><button type="button">6</button></li>
+                    <li><button type="button">7</button></li>
+                    <li><button type="button">8</button></li>
+                    <li><button type="button">9</button></li>
+                    <li><button type="button"><i class="icon-arrow-right"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="section-wrapper" id="banners">
+        <h2 class="section__header">banners</h2>
+        <div class="section__links">
+            <button class="section__btn section__btn--add" type="button">+ add new</button>
+            <div class="section__links-wrapper">
+                <div class="link-elem">
+                    <h3>Banner main</h3>
+                    <a href="http://www.website.com/bannermaing.gif">http://www.website.com/bannermaing.gif</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Sign up banner</h3>
+                    <a href="http://www.website.com/signup.gif">http://www.website.com/signup.gif</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Banner left side</h3>
+                    <a href="http://www.website.com/leftside.gif">http://www.website.com/leftside.gif</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Vertical banner</h3>
+                    <a href="http://www.website.com/vert.gif">http://www.website.com/vert.gif</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Front banner</h3>
+                    <a href="http://www.website.com/front.gif">http://www.website.com/front.gif</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+                <div class="link-elem">
+                    <h3>Horizontal banner</h3>
+                    <a href="http://www.website.com/horizontal.gif">http://www.website.com/horizontal.gif</a>
+                    <button type="button"><i class="icon-links"></i>.</button>
+                    <button type="button"><i class="icon-trash"></i>.</button>
+                </div>
+            </div>
+            <button class="section__btn section__btn--add" type="button">+ add new</button>
+        </div>
+    </section>
+    <section class="section-wrapper" id="personaldata">
+        <form action="" method="post">
+            <h2 class="section__header">personal data</h2>
+            <div class="section__form">
+                <div class="form-wrapper">
+                    <h3>Name</h3>
+                    <input type="text">
+                </div>
+                <div class="form-wrapper">
+                    <h3>Surname</h3>
+                    <input type="text">
+                </div>
+                <div class="form-wrapper">
+                    <h3>E-mail</h3>
+                    <input type="email">
+                </div>
+                <div class="form-wrapper">
+                    <h3>Phone number</h3>
+                    <input type="tel">
+                </div>
+            </div>
+            <div class="section__form">
+                <div class="form-wrapper">
+                    <h3>Skype</h3>
+                    <input type="text">
+                </div>
+                <div class="form-wrapper">
+                    <h3>ICQ</h3>
+                    <input type="text">
+                </div>
+                <div class="form-wrapper">
+                    <h3>Msn</h3>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="section__form">
+                <div class="form-wrapper">
+                    <h3>Wallet</h3>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="section__form">
+                <div class="form-wrapper">
+                    <h3>Password</h3>
+                    <input type="password">
+                </div>
+                <div class="form-wrapper">
+                    <h3>Repeat</h3>
+                    <input type="password">
+                </div>
+            </div>
+            <button class="section__btn section__btn--add" type="submit" value="Save">Save</button>
+        </form>
+    </section>
+    <section class="section-wrapper" id="payout">
+        <h2 class="section__header">payout history</h2>
+        <div class="section__date-filter elem-container">
+            <div class="section__date-inputs elem">
+                <div class="date-place">
+                    <input class="date-input" type="date" value="2021-07-01">
+                    <input class="date-input" type="date" value="2021-07-14">
+                </div>
+                <button class="section__btn section__btn--refresh" type="button"><i class="icon-refresh"></i></button>
+            </div>
+        </div>
+        <div class="section__statistic">
+            <table class="statistic-table statistic-table--justify">
+                <tbody>
+                    <tr class="table-header">
+                        <th scope="col">Date<i class="icon-arrow-down-small"></i></th>
+                        <th scope="col">Amount ($)<i class="icon-arrow-down-small"></i></th>
+                        <th scope="col">Deal<i class="icon-arrow-down-small"></i></th>
+                        <th scope="col">Account<i class="icon-arrow-down-small"></i></th>
+                    </tr>
+                    <tr class="table-line">
+                        <td><p>17/08/02 (12:58)</p></td>
+                        <td><p>34,425.00</p></td>
+                        <td><p>cpl(200)</p></td>
+                        <td><p>bank</p></td>
+                    </tr>
+                    <tr class="table-line">
+                        <td><p>17/08/02 (12:58)</p></td>
+                        <td><p>34,425.00</p></td>
+                        <td><p>cpl(200)</p></td>
+                        <td><p>bank</p></td>
+                    </tr>
+                    <tr class="table-line">
+                        <td><p>17/08/02 (12:58)</p></td>
+                        <td><p>34,425.00</p></td>
+                        <td><p>cpl(200)</p></td>
+                        <td><p>bank</p></td>
+                    </tr>
+                    <tr class="table-line">
+                        <td><p>17/08/02 (12:58)</p></td>
+                        <td><p>34,425.00</p></td>
+                        <td><p>cpl(200)</p></td>
+                        <td><p>bank</p></td>
+                    </tr>
+                    <tr class="table-line">
+                        <td><p>17/08/02 (12:58)</p></td>
+                        <td><p>34,425.00</p></td>
+                        <td><p>cpl(200)</p></td>
+                        <td><p>bank</p></td>
+                    </tr>
+                    <tr class="table-line">
+                        <td><p>17/08/02 (12:58)</p></td>
+                        <td><p>34,425.00</p></td>
+                        <td><p>cpl(200)</p></td>
+                        <td><p>bank</p></td>
+                    </tr>
+                    <tr class="table-line">
+                        <td><p>17/08/02 (12:58)</p></td>
+                        <td><p>34,425.00</p></td>
+                        <td><p>cpl(200)</p></td>
+                        <td><p>bank</p></td>
+                    </tr>
+                    <tr class="table-line">
+                        <td><p>17/08/02 (12:58)</p></td>
+                        <td><p>34,425.00</p></td>
+                        <td><p>cpl(200)</p></td>
+                        <td><p>bank</p></td>
+                    </tr>
+                    <tr class="table-line">
+                        <td><p>17/08/02 (12:58)</p></td>
+                        <td><p>34,425.00</p></td>
+                        <td><p>cpl(200)</p></td>
+                        <td><p>bank</p></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="statistic-nav">
+                <ul class="nav-numbers">
+                    <li><button type="button"><i class="icon-arrow-left"></i></button></li>
+                    <li><button type="button">1</button></li>
+                    <li><button type="button">2</button></li>
+                    <li><button type="button">3</button></li>
+                    <li><button type="button">4</button></li>
+                    <li><button type="button">5</button></li>
+                    <li><button type="button">6</button></li>
+                    <li><button type="button">7</button></li>
+                    <li><button type="button">8</button></li>
+                    <li><button type="button">9</button></li>
+                    <li><button type="button"><i class="icon-arrow-right"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="overlay" id="overlay">
+        <div class="modal modal__login" id="modal-login">
+            <h2 class="section__header">login</h2>
+            <div class="login-wrapper">
+                <input type="text" placeholder="login name">
+                <input type="password" placeholder="password">
+                <button class="section__btn modal-btn" type="submit" value="Enter">Enter</button>
+            </div>
+            <button class="section__btn section__btn--close js--close-modal" type="button"><i class="icon-close"></i></button>
+        </div>
+        <div class="modal modal__chat" id="modal-chat">
+            <h2 class="section__header">online chat</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-photo"></div>
+                    <div class="contact-status">
+                        <h4>Johnny B.</h4>
+                        <p>online</p>
+                    </div>
+                </div>
+                <div class="messages-wrapper">
+                    <p class="from-him">Hello. Can i help you?</p>
+                    <p class="from-me">Hello! I would like to know about my next raise</p>
+                    <p class="from-him">Ok, we will call you. Bye.</p>
+                    <p class="from-me">(-_-')</p>
+                </div>
+                <div class="send-wrapper">
+                    <input class="msg-text" type="text" placeholder="Enter the message">
+                    <button class="section__btn modal-btn" type="submit" value="Send">Send</button>
+                </div>
+            <button class="section__btn section__btn--close js--close-modal" type="button"><i class="icon-close"></i></button>
+        </div>
+        <div class="modal modal__quit" id="modal-quit">
+            <h2 class="section__header">Do you really want to Quit?</h2>
+            <div class="button-wrapper">
+                <button class="section__btn modal-btn js--close-modal" type="button">Cancel</button>
+                <button class="section__btn modal-btn js--close-modal" type="button">Quit</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

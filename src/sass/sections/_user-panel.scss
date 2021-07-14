@@ -1,17 +1,20 @@
 .user-panel {
-  @include separator-bottom;
   display: flex;
   justify-content: flex-end;
   height: $user-panel-height;
   background-color: $light-color;
+  align-items: center;
+  @include separator-bottom;
 
   button {
-    @include separator-left;
     display: flex;
     transition: $animate;
     cursor: pointer;
     background-color: transparent;
     border: none;
+    align-items: center;
+    height: 100%;
+    @include separator-left;
 
     &:hover {
       background: $paragraph-color;
@@ -19,20 +22,16 @@
   }
 
   span {
-    line-height: 50px;
     font-family: $paragraph-font;
     color: $component-header-color;
     font-weight: bold;
     margin-right: 15px;
-    vertical-align: middle;
   }
 
   i {
     color: $component-header-color;
-    line-height: 50px;
     font-size: 16px;
     margin: 0 15px;
-    vertical-align: middle;
   }
 }
 
@@ -40,11 +39,11 @@
 
 @media (max-width: 767px) {
   .user-panel {
-    @include separator-top;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    @include separator-top;
 
     span {
       font-size: 12px;
